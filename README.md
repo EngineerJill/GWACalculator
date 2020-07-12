@@ -1,4 +1,6 @@
-# new-poj
+# GWA Calculator
+
+Calculates General Weighted Average with extra features such as real-time tracker of its percentage equivalence and more.
 
 ## Project setup
 ```

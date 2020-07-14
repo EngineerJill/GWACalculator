@@ -182,7 +182,6 @@ export default {
         position: absolute;
         margin-left: 13px;
         font-size: 0.9rem;
-        font-weight: 100;
     }
 
     @media screen and (max-width: 1215px) {
@@ -239,6 +238,10 @@ export default {
         .subs-font {
             margin-left: 0;
         }
+
+        .compute-btn {
+            left: 35%;
+        }
     }
 
     @media screen and (max-width: 425px) {
@@ -252,7 +255,7 @@ export default {
         }
 
         .input-grades {
-            margin-left: 190px;
+            margin-left: 200px;
         }
 
         .main-input {
@@ -262,6 +265,7 @@ export default {
         .sublist-title {
             margin-bottom: 15px;
         }
+
     }
 
 

@@ -96,7 +96,7 @@ export default {
 },
         methods: {
             toTransfer: function (index) {
-                return this.Transfer = this.One[index]
+                return this.Transfer = this.One[index], window.scrollTo({ top: 0, behavior: 'smooth' })
             }
         }
 }
@@ -213,7 +213,7 @@ export default {
     }
 
 
-    @media (max-width: 425px) {
+    @media screen and (max-width: 425px) {
         .container {
             width: 330px;
         }
@@ -239,7 +239,7 @@ export default {
         }
     }
 
-    @media (max-width: 1113px) {
+    @media screen and (max-width: 1113px) {
         .main-container {
             position: static;
             width: 100%;

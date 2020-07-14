@@ -24,19 +24,12 @@
                     </ul>
             </div>
         </div>
-
-        <Sublist class="component-sublist"/>
     </div>
 </template>
 
 <script>
-import Sublist from '@/components/Sublist'
-
 export default {
     name: 'Calc',
-    components: {
-        Sublist
-    },
     data() {
         return {
         gwa: 'your GWA is...',
@@ -137,7 +130,7 @@ export default {
         height: 200px;
         width: 600px;
         text-align: center;
-        margin-top: 0;
+        top: 20%;
         margin-right: auto;
         margin-left: auto;
         background-color: white;
@@ -202,6 +195,7 @@ export default {
 
     .gwa-text {
         text-align: center;
+        margin-top: 40px;
     }
 
     .gwa-final {
@@ -327,13 +321,12 @@ export default {
     }
 
     .up-box {
-        background-color: #FAFAFA;
-        padding-bottom: 5%;
-        padding-top: 8%;
+        margin-top: 60px;
         height: 100vh;
+        top: 10%;
     }
 
-    @media (max-width: 657px){
+    @media screen and (max-width: 657px){
         .calc-box {
             width: 500px;
         }
@@ -356,7 +349,7 @@ export default {
 
     }
 
-    @media (max-width: 541px){
+    @media screen and (max-width: 541px){
         .calc-box {
             width: 400px;
         }
@@ -401,7 +394,7 @@ export default {
         }
     }
 
-    @media (max-width: 425px) {
+    @media screen and (max-width: 425px) {
         .calc-box {
             width: 300px;
         }

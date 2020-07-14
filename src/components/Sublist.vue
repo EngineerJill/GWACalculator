@@ -1,107 +1,139 @@
 <template>
   <div class="big-picture">
-      <h3 class="sublist-title">Subjects and its equivalent units per year and semester</h3>
+      <expresscomp class="express" :one="Transfer"/>
+      <!-- -->
     <div class="main-container">
-        <div class="container" v-for="weight in One" :key="weight.id">
+        <h3 class="sublist-title">BSCpE Subjects and its equivalent units per year and semester</h3>
+        <div class="container" v-for="(weight, index) in One" :key="weight.id">
                 <div class="content">
-                    <li v-for="subs in weight.subjects" :key="subs.sub" class="listings"><span class="subjects">{{subs.sub}}</span> <span class="units">{{subs.units}}</span></li>
+                    <li v-for="subs in weight.subjects" :key="subs.sub" class="listings"><span class="subjectsis">{{subs.sub}}</span> <span class="units">{{subs.units}}</span></li>
                 </div>
             <div class="list-header">
                 <h3 class="list-header-title">
-                {{weight.year}} Year {{weight.sem}} Semester
+                {{weight.year}} YEAR {{weight.sem}} SEMESTER
                 </h3>
             </div>
+            <button @click="toTransfer(index)" class="transfer-button">Import</button>
         </div>
     </div>
-      
     </div>
 </template>
 
 <script>
+import expresscomp from '@/components/expresscomp'
 
 export default {
     name: 'Sublist',
+    components: {
+        expresscomp
+    },
     data () {
         return {
+            Transfer: 'Please import year and Subject',
             One: [
                 {
                 id: 1,
-                year: '1st',
-                sem: '1st',
+                year: '1ST',
+                sem: '1ST',
                 subjects: [
-                        {sub:'Differential Calculus', units: 3},  
-                        {sub:'Programming Logics and Design', units: 2},
-                        {sub:'Math in the Modern World', units: 3},
-                        {sub:'Chemistry for Engineers', units: 4},  
-                        {sub:'Computer Eng\'g as a Discipline', units: 1},
-                        {sub:'Science Technology and Society', units: 3},
-                        {sub:'Understanding the Self', units: 3},  
-                        {sub:'Physical Education 1', units: 2},
-                        {sub:'NSTP 1 (not included in GWA)', units: 2}
+                        {sub:'Differential Calculus', units: 3, grades: ''},  
+                        {sub:'Programming Logics and Design', units: 2, grades: ''},
+                        {sub:'Math in the Modern World', units: 3, grades: ''},
+                        {sub:'Chemistry for Engineers', units: 4, grades: ''},  
+                        {sub:'Computer Eng\'g as a Discipline', units: 1, grades: ''},
+                        {sub:'Science Technology and Society', units: 3, grades: ''},
+                        {sub:'Understanding the Self', units: 3, grades: ''},  
+                        {sub:'Physical Education 1', units: 2, grades: ''},
                 ]
                 },
                 {
                 id: 2,
-                year: '1st',
-                sem: '2nd',
+                year: '1ST',
+                sem: '2ND',
                 subjects: [
-                        {sub:'Object Oriented Programming', units: 3},  
-                        {sub:'Physics for Engineers', units: 4},
-                        {sub:'Integral Calculus', units: 3},
-                        {sub:'Filipino 1', units: 3},  
-                        {sub:'Discrete Mathematics', units: 3},
-                        {sub:'Engineering Data Analysis', units: 3},
-                        {sub:'Physical Education 2', units: 3},  
-                        {sub:'NSTP2 (not included i GWA)', units: 4}
+                        {sub:'Object Oriented Programming', units: 3, grades: ''},  
+                        {sub:'Physics for Engineers', units: 4, grades: ''},
+                        {sub:'Integral Calculus', units: 3, grades: ''},
+                        {sub:'Filipino 1', units: 3, grades: ''},  
+                        {sub:'Discrete Mathematics', units: 3, grades: ''},
+                        {sub:'Engineering Data Analysis', units: 3, grades: ''},
+                        {sub:'Physical Education 2', units: 2, grades: ''},  
                 ]
                 },
                 {
                 id: 3,
-                year: '2nd',
-                sem: '1st',
+                year: '2ND',
+                sem: '1ST',
                 subjects: [
-                        {sub:'Differential Equations', units: 3},  
-                        {sub:'Arts Appreciation', units: 3},
-                        {sub:'Filipino 2', units: 3},
-                        {sub:'Data Structures and Algorithms', units: 2},  
-                        {sub:'Engineering Economics', units: 3},
-                        {sub:'Fundamentals of Electrical Circuit', units: 3},
-                        {sub:'Physical Education 3', units: 2},  
-                        {sub:'Computer Aided Drafting', units: 1}
+                        {sub:'Differential Equations', units: 3, grades: ''},  
+                        {sub:'Arts Appreciation', units: 3, grades: ''},
+                        {sub:'Filipino 2', units: 3, grades: ''},
+                        {sub:'Data Structures and Algorithms', units: 2, grades: ''},  
+                        {sub:'Engineering Economics', units: 3, grades: ''},
+                        {sub:'Fundamentals of Electrical Circuit', units: 4, grades: ''},
+                        {sub:'Physical Education 3', units: 2, grades: ''},  
+                        {sub:'Computer Aided Drafting', units: 1, grades: ''},
+                        {sub:'Readings in the Philippine History', units: 3, grades: ''}
                 ]
                 },
                 {
                 id: 4,
-                year: '2nd',
-                sem: '1st',
+                year: '2ND',
+                sem: '1ST',
                 subjects: [
-                        {sub:'Fundamentals of Electronics Circuit', units: 4},  
-                        {sub:'Ethics', units: 3},
-                        {sub:'The Contemporary World', units: 3},
-                        {sub:'Life and Works of Rizal', units: 4},  
-                        {sub:'Software Design', units: 4},
-                        {sub:'Numerical Methods', units: 3},
-                        {sub:'Physical Education 4', units: 2},  
-                        {sub:'Purposive Communication', units: 3}
+                        {sub:'Fundamentals of Electronics Circuit', units: 4, grades: ''},  
+                        {sub:'Ethics', units: 3, grades: ''},
+                        {sub:'The Contemporary World', units: 3, grades: ''},
+                        {sub:'Life and Works of Rizal', units: 3, grades: ''},  
+                        {sub:'Software Design', units: 4, grades: ''},
+                        {sub:'Numerical Methods', units: 3, grades: ''},
+                        {sub:'Physical Education 4', units: 2,grades: ''},  
+                        {sub:'Purposive Communication', units: 3, grades: ''}
                 ]
                 }
             ]
     }
-}
+},
+        methods: {
+            toTransfer: function (index) {
+                return this.Transfer = this.One[index]
+            }
+        }
 }
 
 </script>
 
 <style>
+    .big-picture {
+        margin-top: 100px;
+        background-color: #FAFAFA;
+    }
+
+
     .list-header-title {
         margin-top: 8px;
     }
 
     .main-container {
-        width: 100%;
-        height: 800px;
+        width: 40%;
+
         display: flex;
         flex-wrap: wrap;
+        float: right;
+    }
+
+    .transfer-button {
+        position: absolute;
+        height: 30px;
+        width: 100px;
+        border-radius: 5px;
+        background-color: #07689F;
+        color: white;
+        cursor: pointer;
+        border: none;
+        bottom: 5%;
+        left: 37%;
+        box-shadow: 0px 1px 2px #BAC1C5;
     }
 
     .content {
@@ -124,13 +156,11 @@ export default {
 
 
     .sublist-title {
-        margin-top: 1.5%;
         text-align: center;
-        margin-left: 3%;
-        margin-right: 3%;
+        margin: 1.5% auto;
+        padding: 0 5px;
         color:#07689F;
         font-family: Arial, Helvetica, sans-serif;
-        
     }
 
     .separator {
@@ -148,7 +178,7 @@ export default {
         margin-top: 1%;
         margin-left: 2.5%;
         width: 400px;
-        height: 400px;
+        height: 430px;
         box-shadow: 0px 1px 2px #BAC1C5;
         text-align: center;
         margin: 2% auto;
@@ -172,13 +202,12 @@ export default {
         color: #FF7E67;
     }
 
-    .subjects {
-        font-weight: bold;
+    .subjectsis {
         left: 10%;
         color: #07689F;
     }
 
-    .subjects, .units {
+    .subjectsis, .units {
         position: absolute;
         padding-top: 5px;
     }
@@ -205,8 +234,25 @@ export default {
             margin-left: 5px;
         }
 
-        .subjects {
+        .subjectsis {
             left: 5%;
         }
+    }
+
+    @media (max-width: 1113px) {
+        .main-container {
+            position: static;
+            width: 100%;
+            background-color: white;
+        }
+
+        .container {
+            margin-top: 5%;
+        }
+
+        .sublist-title {
+            height: 20px;
+            width: 100%;
+    }
     }
 </style>

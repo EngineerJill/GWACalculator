@@ -51,7 +51,7 @@ export default {
                 year: '1ST',
                 sem: '2ND',
                 subjects: [
-                        {sub:'Object Oriented Programming', units: 3, grades: ''},  
+                        {sub:'Object Oriented Programming', units: 2, grades: ''},  
                         {sub:'Physics for Engineers', units: 4, grades: ''},
                         {sub:'Integral Calculus', units: 3, grades: ''},
                         {sub:'Filipino 1', units: 3, grades: ''},  

@@ -428,7 +428,7 @@ export default {
         }
 
         .li-white-space {
-            margin-left: 100px;
+            margin-left: 80px;
         }
 
          .add-button {

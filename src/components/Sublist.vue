@@ -138,6 +138,10 @@ export default {
 
     .content {
         margin-top: 13%;
+        padding-top: 2%;
+        padding-bottom: 14%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     .all {
@@ -178,7 +182,6 @@ export default {
         margin-top: 1%;
         margin-left: 2.5%;
         width: 400px;
-        height: 430px;
         box-shadow: 0px 1px 2px #BAC1C5;
         text-align: center;
         margin: 2% auto;
@@ -187,7 +190,6 @@ export default {
     .listings {
         width: 350px;
         height: 25px;
-        border-bottom: 1px solid skyblue;
         margin-left: 25px;
         margin-bottom: 10px;
         list-style: none;

@@ -77,7 +77,7 @@ export default {
     },
     methods: {
         addValues: function() {
-            return this.datos.push ({id: this.newId++, grade: parseFloat(this.newGrade), unit: parseFloat(this.newUnit), mult: this.newGrade * this.newUnit}),
+            return this.datos.unshift ({id: this.newId++, grade: parseFloat(this.newGrade), unit: parseFloat(this.newUnit), mult: this.newGrade * this.newUnit}),
             this.newUnit = '', this.newGrade = '',
 
             document.getElementsByClassName('grade-input')[0].focus()

@@ -90,6 +90,22 @@ export default {
                         {sub:'Physical Education 4', units: 2,grades: ''},  
                         {sub:'Purposive Communication', units: 3, grades: ''}
                 ]
+                },
+                {
+                id: 5,
+                year: '3RD',
+                sem: '1ST',
+                subjects: [
+                        {sub:'Introduction to HDL', units: 1, grades: ''},  
+                        {sub:'Computer Engineering Drafting and Design', units: 1, grades: ''},
+                        {sub:'The Entrepreneurial Mind', units: 3, grades: ''},
+                        {sub:'Cognate/Elective Course 1', units: 3, grades: ''},  
+                        {sub:'Logic Circuit and Design', units: 4, grades: ''},
+                        {sub:'Feedbacks and Control System', units: 3, grades: ''},
+                        {sub:'Operating Systems', units: 3,grades: ''},  
+                        {sub:'Data and Digital Communication', units: 3, grades: ''},
+                        {sub:'Fundamental of Mixed Signals and Sensor', units: 3, grades: ''}
+                ]
                 }
             ]
     }

@@ -41,7 +41,7 @@ export default {
         newId: 1
     }
     }, 
-    computed: {
+    computed: { 
         computeHeight: function() {
             let heightz = this.heighty + (this.datos.length)*40
             return heightz + 'px'
@@ -92,18 +92,23 @@ export default {
         calculateGWA: function() {
 
             let roff = function (rnum, rlength) { 
-            var newnumber = Math.round(rnum * Math.pow(10, rlength)) / Math.pow(10, rlength);
+            let newnumber = Math.round(rnum * Math.pow(10, rlength)) / Math.pow(10, rlength);
             return newnumber;
             }
             
-            var ttl = 0
-            var ttlUnts = 0
+            let ttl = 0
+            let ttlUnts = 0
 
-              for (var i=0; i<this.datos.length; i++) {
+              for (let i=0; i<this.datos.length; i++) {
                 ttl += this.datos[i].mult
                 ttlUnts += this.datos[i].unit
               }
+
+                if (this.datos.length === 0) {
+                    return this.gwa = "Please input grades and units"
+                } else {
                 return this.gwa = roff(ttl/ttlUnts, 3)
+                }
         },
     }
 }

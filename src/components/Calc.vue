@@ -91,25 +91,6 @@ export default {
         },
         calculateGWA: function() {
 
-            // let roff = function (rnum, rlength) { 
-            // let newnumber = Math.round(rnum * Math.pow(10, rlength)) / Math.pow(10, rlength);
-            // return newnumber;
-            // }
-            
-            // let ttl = 0
-            // let ttlUnts = 0
-
-            //   for (let i=0; i<this.datos.length; i++) {
-            //     ttl += this.datos[i].mult
-            //     ttlUnts += this.datos[i].unit
-            //   }
-
-            //     if (this.datos.length === 0) {
-            //         return this.gwa = "Please input grades and units"
-            //     } else {
-            //     return this.gwa = roff(ttl/ttlUnts, 3)
-            //     }
-
             const GWA = Object.values(this.datos).reduce((a, {mult}) => a + mult, 0)/
                         Object.values(this.datos).reduce((a, {unit}) => a + unit,0)
 

@@ -44,31 +44,24 @@ export default {
     },
     methods: {
             computedGWA: function() {
-                var final = 0
-                var ttlUnts = 0;
-                var total = 0
-                var i = 0
-                
-                for (i = 0; i<this.one.subjects.length; i++) {
+
+            /* Trying to use ES6 Reduce for a more elegant code**/
+
+               let gradesTimesUnits = 0
+
+                for (let i in this.one.subjects) {
+                    //This if loop is to make all no entries 0 so that the users can see their tentative GWA
                     if (this.one.subjects[i].grades === '') {
                         this.one.subjects[i].grades = "0"
                         this.one.subjects[i].units = "0"
                     }
+                    gradesTimesUnits += (parseFloat(this.one.subjects[i].grades) * parseFloat(this.one.subjects[i].units))
                 }
 
-                for (i=0; i<this.one.subjects.length; i++) {
-                    ttlUnts += parseFloat(this.one.subjects[i].units)
-                    total += parseFloat(this.one.subjects[i].grades) * parseFloat(this.one.subjects[i].units)
-                }
+                const totalUnits = Object.values(this.one.subjects).reduce((a, {units}) => a + parseFloat(units) ,0)
 
-                final = total/ttlUnts
+                return this.total = (gradesTimesUnits/totalUnits).toFixed(3)
 
-                let roff = function (rnum, rlength) { 
-                var newnumber = Math.round(rnum * Math.pow(10, rlength)) / Math.pow(10, rlength);
-                return newnumber;
-                }
-
-                return this.total = roff(final, 3);
             }
         }
 }

@@ -44,32 +44,6 @@ export default {
     },
     methods: {
             computedGWA: function() {
-                // let final = 0
-                // let ttlUnts = 0;
-                // let total = 0
-                // let i = 0
-                
-                // for (let i in this.one.subjects) {
-                //     if (this.one.subjects[i].grades === '') {
-                //         this.one.subjects[i].grades = "0"
-                //         this.one.subjects[i].units = "0"
-                //     }
-                // }
-
-
-                // for (i=0; i<this.one.subjects.length; i++) {
-                //     ttlUnts += parseFloat(this.one.subjects[i].units)
-                //     total += parseFloat(this.one.subjects[i].grades) * parseFloat(this.one.subjects[i].units)
-                // }
-
-                // final = total/ttlUnts
-
-                // let roff = function (rnum, rlength) { 
-                // let newnumber = Math.round(rnum * Math.pow(10, rlength)) / Math.pow(10, rlength);
-                // return newnumber;
-                // }
-
-                // return this.total = roff(final, 3);
 
             /* Trying to use ES6 Reduce for a more elegant code**/
 
